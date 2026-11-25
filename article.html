@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Sentence, 3D Game · PlayPrompt</title>
+<meta name="description" content="We asked several AI models to turn 25 one-line ideas into real 3D browser games through PlayPrompt's creation flow. What worked, what did not, and 248 games you can play.">
+<meta property="og:title" content="Can a one-line idea become a 3D game?">
+<meta property="og:description" content="25 ideas, several AI models, real 3D in the browser. Results, honest conclusions and 248 playable games.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>PlayPrompt 3D Lab</a>
+  <nav class="nav" aria-label="Site">
+    <a href="index.html">Games</a>
+    <a href="article.html" aria-current="page">The story</a>
+    <a class="hide-s" href="credits.html">Credits</a>
+  </nav>
+</div></header>
+
+<main class="article">
+<p class="kicker">PlayPrompt Lab · November 2026</p>
+<h1>Can a one-line idea become a 3D game?</h1>
+<p class="dek">We put that question to four AI models, 25 game ideas and the same creation flow our players use. The answer is encouraging, and the work is not finished yet.</p>
+
+<p>PlayPrompt turns an idea written in plain words, such as <em>“a cat runs on three lanes and collects fish”</em>, into a game you can play straight away. Most of those games are 2D. The obvious next question was whether the same one-sentence flow could make games you move through in three dimensions, running in an ordinary browser, on a laptop or a phone.</p>
+<p>So we ran an evaluation. This is what we tried, what came out, and what we concluded.</p>
+
+<div class="shots"><a href="games/p16-s6.html"><img src="thumbs/p16-s6.webp" alt="" loading="lazy" width="400" height="300"></a><a href="games/p02-s9.html"><img src="thumbs/p02-s9.webp" alt="" loading="lazy" width="400" height="300"></a><a href="games/p24-s9.html"><img src="thumbs/p24-s9.webp" alt="" loading="lazy" width="400" height="300"></a><a href="games/n3-m6.html"><img src="thumbs/n3-m6.webp" alt="" loading="lazy" width="400" height="300"></a></div>
+
+<h2>What we tried</h2>
+<ul>
+  <li><strong>25 game ideas, one sentence each.</strong> Everyday genres: a brick breaker, an endless runner, mini golf with a windmill, pinball, a first-person maze, bowling, fishing on a lake. Our team wrote them; every one simply says “3D”.</li>
+  <li><strong>Several AI models.</strong> Claude Haiku 5.5 at three thinking settings, DeepSeek V4.1 Flash, Gemini 4 Hydrogen and Gemini 4 Neon. Each model got exactly the same ideas.</li>
+  <li><strong>Our real creation flow.</strong> Every game is written, then played and checked automatically before anyone sees it. If a check fails, the game is fixed and checked again. A game only counts as playable here if it passed.</li>
+  <li><strong>Real 3D in the browser.</strong> The games draw with WebGL through three.js, so they run in any modern browser with nothing to install. We counted a game as truly 3D only if it rendered a real 3D scene and still looked 3D when we checked the screenshots by eye.</li>
+  <li><strong>A library of ready-made 3D models.</strong> In a second round, two of the models could pick characters, animals, vehicles and scenery from a library of free CC0 models instead of building everything from boxes and spheres.</li>
+</ul>
+<p>In total that was 268 creation runs and 248 playable games. Every one of them is in the <a href="index.html">gallery</a>, with sound.</p>
+
+<h2>Most ideas became playable 3D games</h2>
+<div class="figure">
+  <h4>Playable games out of 25 ideas, and how many were truly 3D</h4>
+  <div class="keyrow"><span><i style="background:var(--accent)"></i>truly 3D</span><span><i style="background:var(--flat)"></i>playable, but flat</span></div>
+  <div class="brow"><div class="blab">Claude Haiku 5.5, low thinking</div><div class="btrack"><span class="seg s3d" style="width:80.0%"></span><span class="seg sflat" style="width:12.0%"></span></div><div class="bnum">20 in 3D · 3 flat</div></div>
+<div class="brow"><div class="blab">Claude Haiku 5.5, minimal thinking</div><div class="btrack"><span class="seg s3d" style="width:72.0%"></span><span class="seg sflat" style="width:12.0%"></span></div><div class="bnum">18 in 3D · 3 flat</div></div>
+<div class="brow"><div class="blab">Claude Haiku 5.5, no thinking</div><div class="btrack"><span class="seg s3d" style="width:52.0%"></span><span class="seg sflat" style="width:44.0%"></span></div><div class="bnum">13 in 3D · 11 flat</div></div>
+<div class="brow"><div class="blab">DeepSeek V4.1 Flash, no thinking</div><div class="btrack"><span class="seg s3d" style="width:96.0%"></span><span class="seg sflat" style="width:0.0%"></span></div><div class="bnum">24 in 3D</div></div>
+<div class="brow"><div class="blab">Gemini 4 Hydrogen, low thinking</div><div class="btrack"><span class="seg s3d" style="width:88.0%"></span><span class="seg sflat" style="width:0.0%"></span></div><div class="bnum">22 in 3D</div></div>
+<div class="brow"><div class="blab">Gemini 4 Neon, low thinking</div><div class="btrack"><span class="seg s3d" style="width:100.0%"></span><span class="seg sflat" style="width:0.0%"></span></div><div class="bnum">25 in 3D</div></div>
+  <p class="cap">Same 25 ideas for every setup, no model library. A run that did not end with a playable game counts as a miss.</p>
+</div>
+<p>Across the six setups without the library, 139 of 150 runs ended with a playable game, and 122 of those were truly 3D. Gemini 4 Neon made a playable 3D game for all 25 of 25 ideas. Gemini 4 Hydrogen and Gemini 4 Neon together made 47 playable games and every one of them was 3D. DeepSeek V4.1 Flash delivered 24 games, all 24 in 3D.</p>
+<p>Claude Haiku 5.5 showed the trade-off most clearly. With low thinking it made 23 playable games, 20 of them 3D. With thinking switched off it was much faster, but only 13 of its 24 games stayed 3D: the rest quietly slipped back to flat 2D.</p>
+<p class="pull">Getting a game was the easy part. Getting a real 3D game, every time, separated the setups.</p>
+
+<h2>From a sentence to a game in about a minute</h2>
+<div class="figure">
+  <h4>Time from request to a playable game</h4>
+  <div class="keyrow"><span><i style="background:var(--accent2)"></i>typical (median)</span><span><i style="background:color-mix(in srgb, var(--accent2) 35%, transparent)"></i>9 in 10 games ready within</span></div>
+  <div class="brow"><div class="blab">Claude Haiku 5.5, low thinking</div><div class="btrack"><span class="seg sp90" style="width:96.6%"></span><span class="seg sp50 over" style="width:74.3%"></span></div><div class="bnum">174 s · 227 s</div></div>
+<div class="brow"><div class="blab">Claude Haiku 5.5, minimal thinking</div><div class="btrack"><span class="seg sp90" style="width:100.0%"></span><span class="seg sp50 over" style="width:73.6%"></span></div><div class="bnum">173 s · 235 s</div></div>
+<div class="brow"><div class="blab">Claude Haiku 5.5, no thinking</div><div class="btrack"><span class="seg sp90" style="width:52.5%"></span><span class="seg sp50 over" style="width:26.0%"></span></div><div class="bnum">61 s · 123 s</div></div>
+<div class="brow"><div class="blab">DeepSeek V4.1 Flash, no thinking</div><div class="btrack"><span class="seg sp90" style="width:81.3%"></span><span class="seg sp50 over" style="width:19.7%"></span></div><div class="bnum">46 s · 191 s</div></div>
+<div class="brow"><div class="blab">Gemini 4 Hydrogen, low thinking</div><div class="btrack"><span class="seg sp90" style="width:67.3%"></span><span class="seg sp50 over" style="width:31.3%"></span></div><div class="bnum">73 s · 158 s</div></div>
+<div class="brow"><div class="blab">Gemini 4 Neon, low thinking</div><div class="btrack"><span class="seg sp90" style="width:94.0%"></span><span class="seg sp50 over" style="width:56.3%"></span></div><div class="bnum">132 s · 221 s</div></div>
+  <p class="cap">Playable games only. The time includes the automatic play-testing and any fixes, so it is the full wait from request to playable game in our test runs.</p>
+</div>
+<p>The quickest setup, DeepSeek V4.1 Flash, no thinking, typically had a game ready in 46 seconds; its fastest game took 40 seconds. Gemini 4 Hydrogen typically took 73 seconds, with nine in ten games ready within 158 seconds. Gemini 4 Neon was slower at 132 seconds typical, but it was the only setup without the library that never missed an idea.</p>
+
+<h2>Does a library of 3D models help?</h2>
+<p>Games built only from code tend to be made of simple shapes. So we offered two of the models a library of ready-made, consistently styled 3D models, first as an option and then with a request to use it for the player, the enemies and the main scenery.</p>
+<div class="figure">
+  <h4>The same 25 ideas, with and without the model library</h4>
+  <table class="lib">
+    <thead><tr><th></th><th>No library</th><th>Library offered</th><th>Asked to use it</th></tr></thead>
+    <tbody>
+<tr><th>Gemini 4 Hydrogen</th><td><b>22/25</b> playable<br><span class="sub">no library<br>73 s typical</span></td><td><b>24/25</b> playable<br><span class="sub">models used in 10 of 24 games<br>74 s typical</span></td><td><b>22/25</b> playable<br><span class="sub">models used in 21 of 22 games<br>81 s typical</span></td></tr>
+<tr><th>DeepSeek V4.1 Flash</th><td><b>24/25</b> playable<br><span class="sub">no library<br>46 s typical</span></td><td><b>23/25</b> playable<br><span class="sub">models used in 0 of 23 games<br>52 s typical</span></td><td><b>25/25</b> playable<br><span class="sub">models used in 3 of 25 games<br>52 s typical</span></td></tr>
+    </tbody>
+  </table>
+  <p class="cap">“Models used” counts playable games that placed at least one library model.</p>
+</div>
+<p>The two models reacted very differently. Gemini 4 Hydrogen used the library in 10 of 24 games when it was offered, and in 21 of 22 when asked. DeepSeek V4.1 Flash almost ignored it: 0 of 23 games when offered, 3 of 25 when asked.</p>
+<p>Where the library was used, the result was mixed rather than a clear leap. Games whose hero is a character, an animal or a vehicle got visibly better: the runner gained an animal and a fence line, mini golf got its windmill, fishing got a boat, and tower defense came out with real towers. In abstract games such as brick breaker, snake or memory cards, there is no natural hero, so the models ended up as decoration on the side. In a few games the result was worse. Our reading: a model library helps when it is matched to the game's main character, not as a blanket rule.</p>
+
+<h2>Bonus round: ideas that only work in 3D</h2>
+<p>Most classic genres can be played flat, so we added three ideas that cannot: a first-person maze with ramps to a second floor, a space fight where you fly in every direction, and a jumping game across floating sky islands. Across all the setups, 15 of 18 runs produced a playable game, and 14 of those used the third dimension properly; one space fight came back as a flat arena seen from above. These harder ideas also took longer to make. They are in the gallery too.</p>
+
+<h2>What we conclude</h2>
+<p><strong>It works, and it is encouraging.</strong> A single plain sentence can become a real 3D game that runs in a normal browser, often in about a minute, and the best setups did it for nearly every idea we tried.</p>
+<p><strong>It is not ready yet.</strong> Not every run ends with a game. Some setups drift back to flat 2D. Quality is uneven: some cameras sit too far away, some scenes are sparse or dark, and many games still look built from simple shapes. Above all, these 3D games are not yet as reliable as the games PlayPrompt makes today, and not yet as fun and as cute. That is the bar, and 3D does not meet it yet.</p>
+<p><strong>So 3D is not a PlayPrompt feature today.</strong> It is research. The next steps are clear from the data: pick the right model, steer it toward a hero character from the model library, frame the camera better, and keep the checks that make every game playable.</p>
+
+<h2>Play them yourself</h2>
+<p>Numbers only tell part of the story. Every playable game from this evaluation is in the <a href="index.html">gallery</a>, laid out by idea and by model, so you can compare how each model read the same sentence. Some are charming, some are rough, all of them came from one line of plain words.</p>
+
+<div class="band" style="margin-left:0;margin-right:0">
+  <div>
+    <h3>Try PlayPrompt today</h3>
+    <p>The PlayPrompt app is in beta. Describe a game in your own words and play it in your browser.</p>
+  </div>
+  <a class="btn primary" href="https://playprompt.org" rel="noopener">Open PlayPrompt</a>
+</div>
+<p style="text-align:center;margin-bottom:40px"><a class="btn" href="index.html">Browse all 248 games</a></p>
+</main>
+
+<footer><div class="wrap">
+  <span>© PlayPrompt</span>
+  <a href="index.html">Games</a>
+  <a href="credits.html">Credits &amp; licenses</a>
+  <a href="https://playprompt.org" rel="noopener">playprompt.org</a>
+</div></footer>
+</body>
+</html>
